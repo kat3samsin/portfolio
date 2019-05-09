@@ -10,7 +10,6 @@ const IndexPage = () => (
     <SEO title="Katrina Lou S. Tantay" keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
     <h1>Hi I'm Katre!</h1>
     <p>Welcome to my portfolio.</p>
-    <p>Hope you have fun!</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
