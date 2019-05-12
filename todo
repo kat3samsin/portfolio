@@ -1,0 +1,11 @@
+fix file structure
+- make generic classes/objects for page
+- move text to md
+
+add next page button
+add more transition for each text / component
+fix navbar
+add about text
+add projects
+add resume
+make responsive

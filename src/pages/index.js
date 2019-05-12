@@ -1,20 +1,49 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Home from "../components/home"
+import About from "../components/about"
+import Projects from "../components/projects"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Katrina Lou S. Tantay" keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
-    <h1>Hi I'm Katre!</h1>
-    <p>Welcome to my portfolio.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+// import {useSpring, animated} from 'react-spring'
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import {config} from 'react-spring'
+
+class IndexPage extends React.Component {
+  scroll = to => this.DOMnode.scrollTo(to)
+  getRef = node => {
+    this.DOMnode = node
+  }
+  render() {
+    return (
+      <Layout>
+        <SEO title="hello there." keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
+        <Parallax pages={3} ref={this.getRef} config={config.slow} horizontal scrolling={false}>
+          <ParallaxLayer offset={0} caption="home" speed={0.25} onClick={() => this.scroll(1)}>
+            <Home />
+            <div className='btn'>
+              <button onClick={()=>this.scroll(1)}>next</button>
+            </div>
+            <div className='quote'>i'm a web developer</div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={1} caption="about" speed={0.25} onClick={() => this.scroll(2)}>
+            <About />
+            <div className='quote'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Sed accumsan nulla in feugiat interdum. Maecenas ex sapien, 
+              maximus a lobortis vel, faucibus quis lectus. 
+              Integer luctus ex quis ex pulvinar, vel dignissim nunc pharetra. 
+              Etiam tempus ultrices tortor. 
+            </div>
+          </ParallaxLayer>
+          <ParallaxLayer offset={2} caption="projects" speed={0.25} onClick={() => this.scroll(0)}>
+            <Projects />
+          </ParallaxLayer>
+        </Parallax>
+      </Layout>
+    );
+  }
+}
 
 export default IndexPage
