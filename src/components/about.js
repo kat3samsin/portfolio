@@ -34,7 +34,7 @@ const AboutMe = styled(animated.div)`
   margin: 0;
   text-align: center;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
