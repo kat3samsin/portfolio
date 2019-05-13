@@ -29,29 +29,42 @@ const HeroContainer = styled.div`
   height: 100%
 `;
 
-const AboutMe = styled(animated.div)`
+const Hello = styled(animated.div)`
   font-size: 5em;
   margin: 0;
   text-align: center;
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%)
 
 `;
 
-const Description = styled(animated.div)`
+const Name = styled(animated.div)`
   font-size: 1.2em;
   margin: 0;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;
 
-const About = ({ data }) => {
+const Button = styled.button`
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: '50$';
+  padding: 20px;
+`;
+
+const Hero = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   const up = useSpring({
     opacity: 1,
@@ -66,16 +79,17 @@ const About = ({ data }) => {
   return (
     <HeroContainer>
       <BgImage>{frontmatter.background}</BgImage>
-        <AboutMe style={up}>{frontmatter.title}</AboutMe>
-        <Description style={down}>
+        <Hello style={up}>{frontmatter.title}</Hello>
+        <Name style={down}>
           <div dangerouslySetInnerHTML={{ __html: html }} />
-        </Description>
+        </Name>
+        {/* <Button>></Button> */}
     </HeroContainer>
   );
 };
 
-About.propTypes = {
+Hero.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default About;
+export default Hero;
