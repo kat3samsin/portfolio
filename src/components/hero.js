@@ -83,7 +83,6 @@ const Hero = ({ data }) => {
         <Name style={down}>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </Name>
-        {/* <Button>></Button> */}
     </HeroContainer>
   );
 };

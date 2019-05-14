@@ -23,11 +23,11 @@ class IndexPage extends React.Component {
     return (
       <Layout scroll={this.scroll}>
         <SEO title="hello there." keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
-        <Parallax pages={2} ref={this.getRef} config={config.slow} horizontal scrolling={false}>
-          <ParallaxLayer offset={0} caption="hero" speed={0.25} onClick={() => this.scroll(1)}>
+        <Parallax pages={2} ref={this.getRef} config={config.slow} scrolling={true}>
+          <ParallaxLayer offset={0} caption="hero" speed={.5} onClick={() => this.scroll(1)}>
             <Hero data={data.hero.edges}/>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} caption="about" speed={0.25} onClick={() => this.scroll(0)}>
+          <ParallaxLayer offset={1} caption="about" speed={.5} onClick={() => this.scroll(0)}>
             <About data={data.about.edges}/>
           </ParallaxLayer>
           {/* <ParallaxLayer offset={2} caption="projects" speed={0.25} onClick={() => this.scroll(0)}>
@@ -72,6 +72,13 @@ export default (props) => (
               background {
                 childImageSharp {
                   fluid(maxWidth: 700, quality: 90) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+              avatar {
+                childImageSharp {
+                  fluid( quality: 90) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }

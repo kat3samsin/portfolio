@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundImage from 'gatsby-background-image';
+import Img from 'gatsby-image';
 import { useSpring, animated } from 'react-spring';
 import PropTypes from 'prop-types';
 
@@ -32,24 +33,38 @@ const HeroContainer = styled.div`
 const AboutMe = styled(animated.div)`
   font-size: 5em;
   margin: 0;
-  text-align: center;
   position: absolute;
-  top: 20%;
-  left: 50%;
-  margin-right: -50%;
+  top: 30%;
+  left: 25%;
   transform: translate(-50%, -50%)
-
 `;
 
-const Description = styled(animated.div)`
-  font-size: 1.2em;
+const Description = styled(animated.p)`
+  font-size: 1em;
+  color: black;
+`;
+
+const DescriptionContainer = styled.div`
   margin: 0;
-  text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 40%;
   transform: translate(-50%, -50%);
+  padding: 20px
+  border-radius: 5px;
 `;
+
+const Avatar = styled(Img)`
+  width: 250px;
+  height: 300px;
+  // border-radius: 100%; 
+  top: -45%
+  left: 80%
+  margin: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+`
 
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
@@ -65,11 +80,14 @@ const About = ({ data }) => {
   });
   return (
     <HeroContainer>
-      <BgImage>{frontmatter.background}</BgImage>
-        <AboutMe style={up}>{frontmatter.title}</AboutMe>
+      <BgImage>{frontmatter.background}</BgImage>      
+      <AboutMe style={up}>{frontmatter.title}</AboutMe>
+      <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" alt='avatar'/>
+      <DescriptionContainer>
         <Description style={down}>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </Description>
+      </DescriptionContainer>
     </HeroContainer>
   );
 };
