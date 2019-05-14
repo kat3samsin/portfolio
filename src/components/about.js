@@ -25,7 +25,6 @@ const BgImage = styled(BackgroundSection)`
 `;
 
 const HeroContainer = styled.div`
-  float: left;
   width: 100%;
   height: 100%
 `;
@@ -35,7 +34,7 @@ const AboutMe = styled(animated.div)`
   margin: 0;
   position: absolute;
   top: 30%;
-  left: 25%;
+  left: 30%;
   transform: translate(-50%, -50%)
 `;
 
@@ -47,23 +46,24 @@ const Description = styled(animated.p)`
 const DescriptionContainer = styled.div`
   margin: 0;
   position: absolute;
-  top: 60%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  padding: 20px
-  border-radius: 5px;
+  top: 25%;
+  left: 20%;
+  // transform: translate(-50%, -50%);
+  padding: 10%;
+  // border-radius: 5px;
 `;
 
 const Avatar = styled(Img)`
-  width: 250px;
-  height: 300px;
-  // border-radius: 100%; 
-  top: -45%
-  left: 80%
+  width: 15%;
+  height: 30%;
+  border-radius: 5px; 
+  top: -40%
+  left: 20%
   margin: 0;
   position: absolute;
   transform: translate(-50%, -50%);
-  border: 5px solid white;
+  border: 3px solid white;
+  // box-shadow: 5px 5px gray;
 `
 
 const About = ({ data }) => {
