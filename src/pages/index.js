@@ -8,7 +8,6 @@ import About from "../components/about"
 import Projects from "../components/projects"
 import SEO from "../components/seo"
 
-import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import {config} from 'react-spring'
 
 class IndexPage extends React.Component {
@@ -23,17 +22,9 @@ class IndexPage extends React.Component {
     return (
       <Layout scroll={this.scroll}>
         <SEO title="hello there." keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
-        <Parallax pages={2} ref={this.getRef} config={config.slow} scrolling={true}>
-          <ParallaxLayer offset={0} caption="hero" speed={.5} onClick={() => this.scroll(1)}>
-            <Hero data={data.hero.edges}/>
-          </ParallaxLayer>
-          <ParallaxLayer offset={1} caption="about" speed={.5} onClick={() => this.scroll(0)}>
-            <About data={data.about.edges}/>
-          </ParallaxLayer>
-          {/* <ParallaxLayer offset={2} caption="projects" speed={0.25} onClick={() => this.scroll(0)}>
-            <Projects />
-          </ParallaxLayer> */}
-        </Parallax>
+          <Hero data={data.hero.edges}/>
+          <About data={data.about.edges}/>
+          {/* <Projects /> */}
       </Layout>
     );
   }
