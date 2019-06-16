@@ -3,36 +3,44 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-const HeroContainer = styled.div`
-  position: relative;
+const StyledMain = styled.main`
+  display: grid;
+  grid-template-cols: repeat(12, 1fr);
+  grid-gap: 1em;
 `;
 
 const AboutMe = styled.div`
-  font-size: 5em;'
-`;
-
-const Description = styled.p`
-  font-size: 1em;
-  color: black;
+  font-size: 5em;
+  grid-column: 1 / span 12;
+  grid-row: 1;
 `;
 
 const Avatar = styled(Img)`
-  max-width: 80px;
-  max-height: 100px;
-  border-radius: 5px; 
-  border: 3px solid white;
+  width: 15%;
+  height: 20%;
+  grid-column: 1 / span 2;
+  grid-row: 2;
 `
+const Description = styled.div`
+  font-size: 1em;
+  grid-column: 3 / span 10;
+  grid-row: 2;
+`;
 
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
-    <HeroContainer>
+    <StyledMain>
       <AboutMe>{frontmatter.title}</AboutMe>
-      <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" alt='avatar'/>
+      <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" alt='avatar' style={{
+        width: `130px`,
+        height: `150px`
+      }}
+      />
       <Description>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Description>
-    </HeroContainer>
+    </StyledMain>
   );
 };
 

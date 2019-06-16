@@ -8,23 +8,16 @@ import About from "../components/about"
 import Projects from "../components/projects"
 import SEO from "../components/seo"
 
-import {config} from 'react-spring'
 
 class IndexPage extends React.Component {
-  scroll = to => this.DOMnode.scrollTo(to)
-  getRef = node => {
-    this.DOMnode = node
-  }
-
   render() {
     const data = this.props.data;
-    console.log(data)
     return (
-      <Layout scroll={this.scroll}>
+      <Layout>
         <SEO title="hello there." keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
-          <Hero data={data.hero.edges}/>
-          <About data={data.about.edges}/>
-          {/* <Projects /> */}
+        <Hero data={data.hero.edges}/>
+        <About data={data.about.edges}/>
+        {/* <Projects /> */}
       </Layout>
     );
   }
