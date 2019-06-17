@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Font Name";
+    src: url("../fonts/Dank\ Mono\ Regular\ [TheFontsMaster.com].otf");
+}
+
+body {
+    font-family: "Dank Mono", sans-serif;
+}

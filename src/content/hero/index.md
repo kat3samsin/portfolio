@@ -1,5 +1,5 @@
 ---
-title: 'hello there.'
-background: './hero.jpg'
+title: 'hello there. '
+wave: '👋🏻'
 ---
-i'm katre, software developer.
+i'm katrina, a highly motivated front-end developer with a strong passion for continuous learning, innovation and self-development. 👩🏻‍💻
