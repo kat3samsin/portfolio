@@ -66,13 +66,6 @@ export default (props) => (
           node {
             frontmatter {
               title
-              background {
-                childImageSharp {
-                  fluid(maxWidth: 700, quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
               avatar {
                 childImageSharp {
                   fluid( quality: 90) {
