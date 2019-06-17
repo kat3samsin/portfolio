@@ -3,45 +3,46 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-const StyledMain = styled.main`
-  display: grid;
-  grid-template-cols: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-gap: 1em;
-`;
 
 const AboutMe = styled.div`
+  @media only screen and (max-width: 600px) {
+    padding-top: 180px;
+    font-size: 4em;
+  }
+  padding-top: 270px;  
   font-size: 5em;
-  grid-column: 1 / span 12;
-  grid-row: 3;
+  font-style: italic;
+  align-items: flex-end;
 `;
 
 const Avatar = styled(Img)`
-  width: 15%;
-  height: 20%;
-  grid-column: 1 / span 2;
-  grid-row: 4;
-`
+  // display: inline-block;
+  // padding: 20px;
+`;
+
 const Description = styled.div`
-  font-size: 1em;
-  grid-column: 3 / span 10;
-  grid-row: 4;
+  @media only screen and (max-width: 600px) {
+    font-size: 1em;
+  }
+  font-size: 1.2em;
+  display: inline-block;
+  max-width: 700px;
 `;
 
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
-    <StyledMain>
-      <AboutMe>{frontmatter.title}</AboutMe>
+    <>
+      <AboutMe data-aos='fade-in'>{frontmatter.title}</AboutMe>
       <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" alt='avatar' style={{
-        width: `130px`,
-        height: `150px`
+        width: `15%`,
+        height: `20%`
       }}
       />
-      <Description>
+      <Description data-aos='fade-in'>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Description>
-    </StyledMain>
+    </>
   );
 };
 

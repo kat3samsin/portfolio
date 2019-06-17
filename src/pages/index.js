@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"
@@ -9,8 +11,13 @@ import SEO from "../components/seo"
 
 import "../layouts/index.css";
 
-
 class IndexPage extends React.Component {
+  componentDidMount(){
+    AOS.init({
+      duration : 3000
+    })
+  }
+  
   render() {
     const data = this.props.data;
     return (

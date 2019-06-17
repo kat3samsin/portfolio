@@ -13,22 +13,17 @@ import styled from 'styled-components'
 import Header from "./header"
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: 2fr;
-  grid-template-areas: "header"
-                       "sidebar main"
-                       "footer"
-`;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 
-const HeaderStyled = styled(Header)`
-  grid-template-area: header;
+  padding: 120px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
 `;
 
 const Main = styled.div`
-  grid-template-area: main;
-`;
-const Footer = styled.footer`
-  grid-template-area: footer;
 `;
 
 const Layout = ({ children }) => (
@@ -43,13 +38,15 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
+      <>
+      <Header siteTitle={data.site.siteMetadata.title} />
       <Container>
-        <Header siteTitle={data.site.siteMetadata.title} />
           <Main>{children}</Main>
-          <Footer>
-            © {new Date().getFullYear()}, kat3samsin
-          </Footer>
       </Container>
+      <footer>
+      © {new Date().getFullYear()}, kat3samsin
+      </footer>
+      </>
     )}
   />
 )

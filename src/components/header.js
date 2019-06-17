@@ -6,20 +6,27 @@ import styled from 'styled-components'
 
 const HeaderStyled = styled.header`
   display: flex;
+  align-content: flex-end;
 `;
 
 const LinkStyled = styled(Link)`
-  padding: 5px;
+  padding: 10px;
 `;
 
 const Header = ({ siteTitle }) => (
   <>
   <HeaderStyled>
     <LinkStyled to="/about">
-      about
+      About
     </LinkStyled>
     <LinkStyled to="/projects">
-      projects
+      Projects
+    </LinkStyled>
+    <LinkStyled to="/skills">
+      Skills
+    </LinkStyled>
+    <LinkStyled to="/contact">
+      Contact
     </LinkStyled>
   </HeaderStyled>
   </>
