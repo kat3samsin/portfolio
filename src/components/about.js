@@ -12,7 +12,6 @@ const AboutMe = styled.div`
   padding-top: 270px;  
   font-size: 5em;
   font-style: italic;
-  align-items: flex-end;
 `;
 
 const Avatar = styled(Img)`
@@ -26,7 +25,7 @@ const Description = styled.div`
   }
   font-size: 1.2em;
   display: inline-block;
-  max-width: 700px;
+  // max-width: 700px;
 `;
 
 const About = ({ data }) => {

@@ -1,7 +1,7 @@
 {
   "name": "kat3samsin",
   "private": true,
-  "description": "this is me",
+  "description": "This is me",
   "version": "0.1.0",
   "author": "Katrina Lou S. Tantay <kat3samsin@gmail.com>",
   "dependencies": {
@@ -35,6 +35,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy:github": "npm run build && node ./scripts/deploy-github",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

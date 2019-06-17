@@ -7,6 +7,7 @@ import 'aos/dist/aos.css';
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
+import Projects from "../components/projects";
 import SEO from "../components/seo"
 
 import "../layouts/index.css";
@@ -25,6 +26,7 @@ class IndexPage extends React.Component {
         <SEO title="hello there." keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
         <Hero data={data.hero.edges}/>
         <About data={data.about.edges}/>
+        <Projects data={data.projects.edges}/>
       </Layout>
     );
   }
@@ -44,6 +46,16 @@ export default (props) => (
             frontmatter {
               title
               wave
+            }
+            html
+          }
+        }
+      }
+      projects: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/projects/" } }) {
+        edges {
+          node {
+            frontmatter {
+              title
             }
             html
           }

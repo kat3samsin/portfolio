@@ -7,7 +7,7 @@ const Hello = styled.div`
     padding-top: 0px;
     font-size: 3em;
   }
-  padding-top: 100px;
+  padding-top: 50px;
   font-size: 5em;
   font-style: italic; 
   display: inline-block;
