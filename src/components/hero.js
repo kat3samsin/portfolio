@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
+import Img from 'gatsby-image';
 
 const Hello = styled.div`
   @media only screen and (max-width: 600px) {
@@ -23,16 +24,16 @@ const helloWave = keyframes`
   100% { transform: rotate(  0.0deg) }
 `;
 
-const Wave = styled.div`
-  @media only screen and (max-width: 600px) {
-    font-size: 3em;
-  }
-  font-size: 5em;
+const Wave = styled(Img)`
   animation-name: ${helloWave};
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
-  display: inline-block;
+  // display: inline-block;
+`;
+
+const WaveContainer = styled.div`
+  // display: inline-block;
 `;
 
 const Greetings = styled.div`
@@ -55,7 +56,9 @@ const Hero = ({ data }) => {
   return (      
     <>
         <Hello data-aos='flip-right'>{frontmatter.title}</Hello>
-        <Wave data-aos='fade-in'>{frontmatter.wave}</Wave>
+        <WaveContainer data-aos='fade-in'>
+          <Wave fixed={frontmatter.wave.childImageSharp.fixed} alt="hello" />
+        </WaveContainer>
         <Greetings data-aos='fade-in'>
           I'm&nbsp;<Name>Katrina Tantay.&nbsp;</Name>
           <div dangerouslySetInnerHTML={{ __html: html }} />

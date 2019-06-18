@@ -45,7 +45,13 @@ export default (props) => (
           node {
             frontmatter {
               title
-              wave
+              wave {
+                childImageSharp {
+                  fixed(width: 80, height: 80) {
+                    ...GatsbyImageSharpFixed
+                  }
+                }
+              }
             }
             html
           }
@@ -68,8 +74,8 @@ export default (props) => (
               title
               avatar {
                 childImageSharp {
-                  fluid( quality: 90) {
-                    ...GatsbyImageSharpFluid_withWebp
+                  fixed(width: 130, height: 150) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }

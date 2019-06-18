@@ -12,20 +12,21 @@ const ProjectsTitle = styled.div`
   font-style: italic;
 `;
 
-const Project = styled.div`
-  @media only screen and (max-width: 600px) {
-    font-size: 1em;
-  }
-  font-size: 1.2em;
-  display: inline-block;
-  // max-width: 700px;
-`;
+// const Project = styled.div`
+//   @media only screen and (max-width: 600px) {
+//     font-size: 1em;
+//   }
+//   font-size: 1.2em;
+//   display: inline-block;
+//   // max-width: 700px;
+// `;
 
 const Projects = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
     <>
       <ProjectsTitle data-aos='fade-in'>{frontmatter.title}</ProjectsTitle>
+      
     </>
   );
 };

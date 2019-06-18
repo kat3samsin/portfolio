@@ -14,9 +14,9 @@ const AboutMe = styled.div`
   font-style: italic;
 `;
 
-const Avatar = styled(Img)`
-  // display: inline-block;
-  // padding: 20px;
+const Avatar = styled.div`
+  display: inline-block;
+  padding: 20px;
 `;
 
 const Description = styled.div`
@@ -33,11 +33,7 @@ const About = ({ data }) => {
   return (
     <>
       <AboutMe data-aos='fade-in'>{frontmatter.title}</AboutMe>
-      <Avatar fluid={frontmatter.avatar.childImageSharp.fluid} alt="Avatar" alt='avatar' style={{
-        width: `15%`,
-        height: `20%`
-      }}
-      />
+      <Avatar data-aos='fade-in'><Img fixed={frontmatter.avatar.childImageSharp.fixed} alt='avatar' /></Avatar>
       <Description data-aos='fade-in'>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Description>
