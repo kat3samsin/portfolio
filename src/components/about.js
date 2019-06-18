@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import Typist from 'react-typist';
 
 
 const AboutMe = styled.div`
@@ -39,6 +40,13 @@ const About = ({ data }) => {
       </AvatarContainer>
       <Description data-aos='fade-in'>
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        <div style={{display: `inline-block`}}>I have a full spectrum of interests. I'm a
+        <Typist cursor={{show:false}}>
+          {frontmatter.hobbies && frontmatter.hobbies.map((hobby, i) => 
+            <div style={{display: `inline-block`}}>{hobby}<Typist.Backspace count={hobby.length} delay={500}/></div>)}
+            {frontmatter.hobbies.join(', ')}
+        </Typist>
+        </div>
       </Description>
     </>
   );
