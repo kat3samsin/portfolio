@@ -14,8 +14,9 @@ const AboutMe = styled.div`
   font-style: italic;
 `;
 
-const Avatar = styled.div`
+const AvatarContainer = styled.div`
   display: inline-block;
+  vertical-align:top;
   padding: 20px;
 `;
 
@@ -25,7 +26,7 @@ const Description = styled.div`
   }
   font-size: 1.2em;
   display: inline-block;
-  // max-width: 700px;
+  max-width: 700px;
 `;
 
 const About = ({ data }) => {
@@ -33,7 +34,9 @@ const About = ({ data }) => {
   return (
     <>
       <AboutMe data-aos='fade-in'>{frontmatter.title}</AboutMe>
-      <Avatar data-aos='fade-in'><Img fixed={frontmatter.avatar.childImageSharp.fixed} alt='avatar' /></Avatar>
+      <AvatarContainer data-aos='fade-up'>
+        <Img fixed={frontmatter.avatar.childImageSharp.fixed} alt='avatar' />
+      </AvatarContainer>
       <Description data-aos='fade-in'>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Description>

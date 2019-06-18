@@ -29,11 +29,11 @@ const Wave = styled(Img)`
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
-  // display: inline-block;
+  display: inline-block;
 `;
 
 const WaveContainer = styled.div`
-  // display: inline-block;
+  display: inline-block;
 `;
 
 const Greetings = styled.div`
