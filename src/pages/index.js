@@ -80,6 +80,7 @@ export default (props) => (
                 }
               }
               hobbies
+              summary
             }
             html
           }

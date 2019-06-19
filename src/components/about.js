@@ -44,7 +44,7 @@ const About = ({ data }) => {
         <Typist cursor={{show:false}}>
           {frontmatter.hobbies && frontmatter.hobbies.map((hobby, i) => 
             <div style={{display: `inline-block`}}>{hobby}<Typist.Backspace count={hobby.length} delay={500}/></div>)}
-            {frontmatter.hobbies.join(', ')}
+            {frontmatter.hobbies.join(', ')}{frontmatter.summary}
         </Typist>
         </div>
       </Description>
