@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ProjectsTitle = styled.div`
+const SkillsTitle = styled.div`
   @media only screen and (max-width: 600px) {
     padding-top: 180px;
     font-size: 4em;
@@ -13,7 +13,7 @@ const ProjectsTitle = styled.div`
   font-style: italic;
 `;
 
-// const Project = styled.div`
+// const Skill = styled.div`
 //   @media only screen and (max-width: 600px) {
 //     font-size: 1em;
 //   }
@@ -22,18 +22,18 @@ const ProjectsTitle = styled.div`
 //   // max-width: 700px;
 // `;
 
-const Projects = ({ data }) => {
+const Skills = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
     <>
-      <ProjectsTitle data-aos='fade-in'>{frontmatter.title}</ProjectsTitle>
+      <SkillsTitle data-aos='fade-in'>{frontmatter.title}</SkillsTitle>
       
     </>
   );
 };
 
-Projects.propTypes = {
+Skills.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default Projects;
+export default Skills;

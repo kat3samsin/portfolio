@@ -9,6 +9,7 @@ const Hello = styled.div`
     font-size: 3em;
   }
   padding-top: 50px;
+  font-family: Dank Mono Italic;
   font-size: 5em;
   font-style: italic; 
   display: inline-block;
@@ -55,7 +56,7 @@ const Hero = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (      
     <>
-        <Hello data-aos='flip-right'>{frontmatter.title}</Hello>
+        <Hello data-aos='fade-in'>{frontmatter.title}</Hello>
         <WaveContainer data-aos='fade-in'>
           <Wave fixed={frontmatter.wave.childImageSharp.fixed} alt="hello" />
         </WaveContainer>
@@ -63,6 +64,7 @@ const Hero = ({ data }) => {
           I'm&nbsp;<Name>Katrina Tantay.&nbsp;</Name>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </Greetings>
+        <div>You can reach me at <a href='mailto:kat3samsin@gmail.com' target='_blank'>kat3samsin@gmail.com</a></div>
     </>
   );
 };

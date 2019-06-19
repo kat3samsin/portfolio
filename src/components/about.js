@@ -10,7 +10,8 @@ const AboutMe = styled.div`
     padding-top: 180px;
     font-size: 4em;
   }
-  padding-top: 270px;  
+  padding-top: 270px;
+  font-family: Dank Mono Italic;  
   font-size: 5em;
   font-style: italic;
 `;

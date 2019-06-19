@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import About from "../components/about"
 import Projects from "../components/projects";
+import Skills from "../components/skills";
 import SEO from "../components/seo"
 
 import "../layouts/index.css";
@@ -23,9 +24,10 @@ class IndexPage extends React.Component {
     const data = this.props.data;
     return (
       <Layout>
-        <SEO title="hello there." keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
+        <SEO title="Portfolio" keywords={[`katrina`, `lou`, `samsin`, 'tantay', 'gatsby', 'portfolio']} />
         <Hero data={data.hero.edges}/>
         <About data={data.about.edges}/>
+        <Skills data={data.skills.edges}/>
         <Projects data={data.projects.edges}/>
       </Layout>
     );
@@ -64,6 +66,18 @@ export default (props) => (
               title
             }
             html
+          }
+        }
+      }
+      skills: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/skills/" } }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              languages
+              frameworks
+              tools
+            }
           }
         }
       }
