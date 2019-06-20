@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 
 // import Header from "./header"
 
@@ -23,8 +23,7 @@ const Container = styled.div`
   margin: 10 auto;
 `;
 
-const Main = styled.div`
-`;
+const Main = styled.div``;
 
 const Footer = styled.footer`
   padding: 10px 10px;
@@ -44,20 +43,18 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Container>
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <Container>
           <Main>{children}</Main>
-      </Container>
-      <Footer>
-      © {new Date().getFullYear()}, kat3samsin
-      </Footer>
+        </Container>
+        <Footer>© {new Date().getFullYear()}, Katrina Lou S. Tantay</Footer>
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

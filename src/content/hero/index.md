@@ -1,6 +1,7 @@
 ---
 title: 'hello there! '
 wave: './wave.png'
+email: './email.png'
 start: 'A highly motivated'
 roles:
   - software engineer

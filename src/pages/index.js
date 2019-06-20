@@ -76,6 +76,13 @@ export default props => (
                     }
                   }
                 }
+                email {
+                  childImageSharp {
+                    fixed(width: 20, height: 20) {
+                      ...GatsbyImageSharpFixed
+                    }
+                  }
+                }
               }
             }
           }

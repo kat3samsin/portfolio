@@ -86,7 +86,9 @@ const Hero = ({ data }) => {
       </Greetings>
       <br />
       <div data-aos="fade-right">
-        Let's chat&nbsp;
+        Let's chat!&nbsp;
+        <Img fixed={frontmatter.email.childImageSharp.fixed} alt="email" />
+        &nbsp;
         <Email
           href="mailto:kat3samsin@gmail.com"
           target="_blank"
