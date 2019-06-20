@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Katrina Lou S. Tantay | Front End Engineer`,
+    title: `Katrina Lou S. Tantay | Software Engineer`,
     description: `Katrina Lou S. Tantay's portfolio`,
-    author: `@gatsbyjs`,
+    author: `@kat3samsin`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,9 +27,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-page-progress',
+      options: {
+        includePaths: ['/', { regex: '^/blog' }],
+        height: 2,
+        prependToBody: false,
+        color: `gray`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

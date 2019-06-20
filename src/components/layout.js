@@ -20,10 +20,15 @@ const Container = styled.div`
 
   padding: 120px 100px;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 10 auto;
 `;
 
 const Main = styled.div`
+`;
+
+const Footer = styled.footer`
+  padding: 10px 10px;
+  margin: 10 auto;
 `;
 
 const Layout = ({ children }) => (
@@ -43,9 +48,9 @@ const Layout = ({ children }) => (
       <Container>
           <Main>{children}</Main>
       </Container>
-      <footer>
+      <Footer>
       © {new Date().getFullYear()}, kat3samsin
-      </footer>
+      </Footer>
       </>
     )}
   />
