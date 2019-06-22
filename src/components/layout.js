@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-// import Header from "./header"
+import DarkModeToggle from './darkModeToggle';
+import Header from './header';
 
 const Container = styled.div`
   display: flex;
@@ -30,6 +31,14 @@ const Footer = styled.footer`
   margin: 10 auto;
 `;
 
+const ToggleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px 10px;
+  margin: auto;
+`;
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -43,7 +52,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <Header siteTitle={data.site.siteMetadata.title} />
+        {/* <ToggleContainer>
+          <DarkModeToggle />
+        </ToggleContainer> */}
         <Container>
           <Main>{children}</Main>
         </Container>

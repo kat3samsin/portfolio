@@ -25,10 +25,9 @@ const SkillsTitle = styled.div`
 const Skills = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
-    <>
-      <SkillsTitle data-aos='fade-in'>{frontmatter.title}</SkillsTitle>
-      
-    </>
+    <div id="skills">
+      <SkillsTitle data-aos="fade-in">{frontmatter.title}</SkillsTitle>
+    </div>
   );
 };
 

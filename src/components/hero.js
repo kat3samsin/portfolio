@@ -53,23 +53,19 @@ const Name = styled.div`
 `;
 
 const Email = styled.a`
-  &:hover {
-    border-bottom: 2px solid black;
-  }
   text-decoration: none;
-  color: black;
   font-weight: bold;
 `;
 
 const Hero = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
-    <>
+    <div id="home">
       <Hello data-aos="fade-in">{frontmatter.title}</Hello>
       <WaveContainer data-aos="fade-in">
         <Wave fixed={frontmatter.wave.childImageSharp.fixed} alt="hello" />
       </WaveContainer>
-      <Greetings data-aos="fade-in">
+      <Greetings data-aos="fade-up">
         I'm&nbsp;<Name>Katrina Tantay.&nbsp;</Name>
         <Typist cursor={{ blink: true, hideWhenDone: true }}>
           {frontmatter.start}&nbsp;
@@ -85,7 +81,7 @@ const Hero = ({ data }) => {
         </Typist>
       </Greetings>
       <br />
-      <div data-aos="fade-right">
+      <div data-aos="fade-up">
         Let's chat!&nbsp;
         <Img fixed={frontmatter.email.childImageSharp.fixed} alt="email" />
         &nbsp;
@@ -97,7 +93,7 @@ const Hero = ({ data }) => {
           kat3samsin@gmail.com
         </Email>
       </div>
-    </>
+    </div>
   );
 };
 

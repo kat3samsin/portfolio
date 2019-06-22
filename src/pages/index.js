@@ -42,7 +42,7 @@ class IndexPage extends React.Component {
             'manila',
           ]}
         />
-        <Hero data={data.hero.edges} />
+        <Hero id="hero" data={data.hero.edges} />
         <About data={data.about.edges} />
         <Skills data={data.skills.edges} />
         <Projects data={data.projects.edges} />

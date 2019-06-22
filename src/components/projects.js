@@ -25,10 +25,9 @@ const ProjectsTitle = styled.div`
 const Projects = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
-    <>
-      <ProjectsTitle data-aos='fade-in'>{frontmatter.title}</ProjectsTitle>
-      
-    </>
+    <div id="projects">
+      <ProjectsTitle data-aos="fade-in">{frontmatter.title}</ProjectsTitle>
+    </div>
   );
 };
 

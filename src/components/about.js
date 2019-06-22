@@ -6,7 +6,6 @@ import Typist from 'react-typist';
 
 const AboutMe = styled.div`
   @media only screen and (max-width: 600px) {
-    padding-top: 180px;
     font-size: 4em;
   }
   padding-top: 270px;
@@ -33,12 +32,12 @@ const Description = styled.div`
 const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
-    <>
+    <div id="about">
       <AboutMe data-aos="fade-in">{frontmatter.title}</AboutMe>
       <AvatarContainer data-aos="fade-up">
         <Img fixed={frontmatter.avatar.childImageSharp.fixed} alt="avatar" />
       </AvatarContainer>
-      <Description data-aos="fade-in">
+      <Description data-aos="fade-left">
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <div style={{ display: `inline-block` }}>
           I have a full spectrum of interests. I'm a
@@ -55,7 +54,7 @@ const About = ({ data }) => {
           </Typist>
         </div>
       </Description>
-    </>
+    </div>
   );
 };
 
