@@ -10,8 +10,8 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import DarkModeToggle from './darkModeToggle';
 import Header from './header';
+import Footer from './footer';
 
 const Container = styled.div`
   display: flex;
@@ -26,17 +26,9 @@ const Container = styled.div`
 
 const Main = styled.div``;
 
-const Footer = styled.footer`
+const FooterStyled = styled(Footer)`
   padding: 10px 10px;
   margin: 10 auto;
-`;
-
-const ToggleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 10px 10px;
-  margin: auto;
 `;
 
 const Layout = ({ children }) => (
@@ -53,13 +45,10 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        {/* <ToggleContainer>
-          <DarkModeToggle />
-        </ToggleContainer> */}
         <Container>
           <Main>{children}</Main>
         </Container>
-        <Footer>© {new Date().getFullYear()}, Katrina Lou S. Tantay</Footer>
+        <FooterStyled />
       </>
     )}
   />

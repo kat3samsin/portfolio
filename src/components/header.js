@@ -8,24 +8,30 @@ import DarkModeToggle from './darkModeToggle';
 const HeaderStyled = styled.header`
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
 `;
 
 const LinkStyled = styled(Link)`
-  font-size: 1em;
-  padding: 10px;
-  &:hover {
-    border-bottom: none !important;
+  @media only screen and (max-width: 600px) {
+    font-size: 0.7em;
+    padding: 5px;
   }
+  font-size: 1em;
+  margin: 10px;
+  text-decoration: none;
 `;
 
 const ToggleContainer = styled.div`
+  @media only screen and (max-width: 600px) {
+    padding: 0px;
+  }
   padding: 10px 10px;
   margin-left: auto;
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <>
-    <HeaderStyled>
+    <HeaderStyled data-aos="flip-up">
       <LinkStyled to="/#home">Home</LinkStyled>
       <LinkStyled to="/#about">About</LinkStyled>
       <LinkStyled to="/#skills">Skills</LinkStyled>
