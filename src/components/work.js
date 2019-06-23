@@ -33,15 +33,15 @@ const Work = ({ data }) => {
         data.map(({ node }, i) => {
           const { company, title, range } = node.frontmatter;
           return (
-            <>
-              <WorkContainer data-aos="fade-in" key={i}>
+            <div key={i}>
+              <WorkContainer data-aos="fade-in">
                 <Company>
                   {title} at {company}
                 </Company>
                 {range}
                 <div dangerouslySetInnerHTML={{ __html: node.html }} />
               </WorkContainer>
-            </>
+            </div>
           );
         })}
     </div>
