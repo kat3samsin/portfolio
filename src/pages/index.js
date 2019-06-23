@@ -47,7 +47,7 @@ class IndexPage extends React.Component {
         <About data={data.about.edges} />
         <Work data={data.work.edges} />
         <Skills data={data.skills.edges} />
-        <Projects data={data.projects.edges} />
+        {/* <Projects data={data.projects.edges} /> */}
       </Layout>
     );
   }

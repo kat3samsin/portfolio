@@ -35,7 +35,7 @@ const Header = () => (
       <LinkStyled to="/#about">About</LinkStyled>
       <LinkStyled to="/#work">Work</LinkStyled>
       <LinkStyled to="/#skills">Skills</LinkStyled>
-      <LinkStyled to="/#projects">Projects</LinkStyled>
+      {/* <LinkStyled to="/#projects">Projects</LinkStyled> */}
       <AnchorStyled
         href="https://drive.google.com/file/d/1aoWZc8HJ6HovtujThelY7qggiRK5GNrE/view?usp=sharing"
         target="_blank"
