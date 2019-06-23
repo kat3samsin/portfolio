@@ -10,32 +10,20 @@ const SkillsTitle = styled.div`
   padding-top: 200px;
   font-family: Dank Mono Italic;
   font-size: 5em;
-  font-style: italic;
   font-weight: bold;
 `;
 
 const Skill = styled.div``;
 
 const Skills = ({ data }) => {
-  const { frontmatter } = data[0].node;
+  const { frontmatter, html } = data[0].node;
   return (
     <div id="skills">
       <SkillsTitle className="title" data-aos="fade-in">
         {frontmatter.title}
       </SkillsTitle>
       <Skill data-aos="fade-in">
-        Languages
-        <ul>
-          {frontmatter.skills &&
-            frontmatter.skills.map((skill, i) => <li key={i}>{skill}</li>)}
-        </ul>
-      </Skill>
-      <Skill data-aos="fade-in">
-        Tools
-        <ul>
-          {frontmatter.tools &&
-            frontmatter.tools.map((tool, i) => <li key={i}>{tool}</li>)}
-        </ul>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </Skill>
     </div>
   );

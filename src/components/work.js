@@ -10,8 +10,16 @@ const WorkTitle = styled.div`
   padding-top: 200px;
   font-family: Dank Mono Italic;
   font-size: 5em;
-  font-style: italic;
   font-weight: bold;
+`;
+
+const WorkContainer = styled.div`
+  max-width: 700px;
+`;
+
+const Company = styled.div`
+  font-weight: bold;
+  font-family: Dank Mono Italic;
 `;
 
 const Work = ({ data }) => {
@@ -20,17 +28,22 @@ const Work = ({ data }) => {
       <WorkTitle className="title" data-aos="fade-in">
         work
       </WorkTitle>
-      <ul data-aos="fade-in">
-        {data &&
-          data.map(({ node }, i) => {
-            const { company, title, range } = node.frontmatter;
-            return (
-              <li key={i}>
-                {title} - {company} ({range})
-              </li>
-            );
-          })}
-      </ul>
+
+      {data &&
+        data.map(({ node }, i) => {
+          const { company, title, range } = node.frontmatter;
+          return (
+            <>
+              <WorkContainer data-aos="fade-in" key={i}>
+                <Company>
+                  {title} at {company}
+                </Company>
+                {range}
+                <div dangerouslySetInnerHTML={{ __html: node.html }} />
+              </WorkContainer>
+            </>
+          );
+        })}
     </div>
   );
 };

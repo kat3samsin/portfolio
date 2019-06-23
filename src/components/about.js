@@ -11,7 +11,6 @@ const AboutMe = styled.div`
   padding-top: 270px;
   font-family: Dank Mono Italic;
   font-size: 5em;
-  font-style: italic;
   font-weight: bold;
 `;
 

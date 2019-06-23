@@ -6,13 +6,10 @@ import Typist from 'react-typist';
 
 const Hello = styled.div`
   @media only screen and (max-width: 600px) {
-    padding-top: 0px;
     font-size: 4em;
   }
-  padding-top: 50px;
   font-family: Dank Mono Italic;
   font-size: 5em;
-  font-style: italic;
   font-weight: bold;
   display: inline-block;
 `;
@@ -42,6 +39,7 @@ const WaveContainer = styled.div`
 const Greetings = styled.div`
   @media only screen and (max-width: 600px) {
     font-size: 1.2em;
+    padding-top: 10px;
   }
   font-size: 1.7em;
   max-width: 700px;

@@ -16,6 +16,7 @@ const CopyrightContainer = styled.div`
   font-size: 1em;
   margin-left: auto;
   padding: 10px;
+  overflow: hidden;
 `;
 
 const LinkStyled = styled.a`
@@ -43,7 +44,7 @@ const Footer = () => (
       </LinkStyled>
       <br />
       <CopyrightContainer>
-        © {new Date().getFullYear()} Katrina Lou Samsin Tantay. Made in 🇵🇭
+        © {new Date().getFullYear()} Katrina Lou S. Tantay | 🇵🇭
       </CopyrightContainer>
     </FooterStyled>
   </>

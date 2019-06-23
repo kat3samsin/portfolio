@@ -18,6 +18,13 @@ const LinkStyled = styled(Link)`
   font-weight: bold;
 `;
 
+const AnchorStyled = styled.a`
+  font-size: 1em;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+`;
+
 const ToggleContainer = styled.div`
   margin-left: auto;
 `;
@@ -29,7 +36,12 @@ const Header = () => (
       <LinkStyled to="/#work">Work</LinkStyled>
       <LinkStyled to="/#skills">Skills</LinkStyled>
       <LinkStyled to="/#projects">Projects</LinkStyled>
-      {/* <LinkStyled to="/#contact">Contact</LinkStyled> */}
+      <AnchorStyled
+        href="https://drive.google.com/file/d/1aoWZc8HJ6HovtujThelY7qggiRK5GNrE/view?usp=sharing"
+        target="_blank"
+      >
+        Resume
+      </AnchorStyled>
       <ToggleContainer>
         <DarkModeButton />
       </ToggleContainer>

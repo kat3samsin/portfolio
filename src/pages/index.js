@@ -108,9 +108,8 @@ export default props => (
             node {
               frontmatter {
                 title
-                skills
-                tools
               }
+              html
             }
           }
         }
