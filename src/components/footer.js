@@ -5,16 +5,17 @@ const FooterStyled = styled.header`
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
+  border-top: 2px solid #ffa7c4;
 `;
 
-const Container = styled.div`
+const CopyrightContainer = styled.div`
   @media only screen and (max-width: 600px) {
     font-size: 0.7em;
-    padding: 5px;
-    margin: auto;
+    margin: 0;
   }
-  margin-right: auto;
   font-size: 1em;
+  margin-left: auto;
+  padding: 10px;
 `;
 
 const LinkStyled = styled.a`
@@ -22,17 +23,15 @@ const LinkStyled = styled.a`
     font-size: 0.7em;
     padding: 5px;
   }
-  margin-left: 10px;
+  padding: 10px;
   font-size: 1em;
+  font-weight: bold;
   text-decoration: none;
 `;
 
 const Footer = () => (
   <>
     <FooterStyled>
-      <Container>
-        {new Date().getFullYear()} | Developed by Katrina Lou S. Tantay
-      </Container>
       <LinkStyled href="mailto:kat3samsin@gmail.com" target="_blank">
         Email
       </LinkStyled>
@@ -42,6 +41,10 @@ const Footer = () => (
       <LinkStyled href="https://www.linkedin.com/in/ksamsin" target="_blank">
         LinkedIn
       </LinkStyled>
+      <br />
+      <CopyrightContainer>
+        © {new Date().getFullYear()} Katrina Lou Samsin Tantay. Made in 🇵🇭
+      </CopyrightContainer>
     </FooterStyled>
   </>
 );

@@ -22,6 +22,7 @@ const Container = styled.div`
   padding: 120px 100px;
   max-width: 1440px;
   margin: 10 auto;
+  overflow: hidden;
 `;
 
 const Main = styled.div``;

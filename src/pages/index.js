@@ -9,6 +9,7 @@ import Hero from '../components/hero';
 import About from '../components/about';
 import Projects from '../components/projects';
 import Skills from '../components/skills';
+import Work from '../components/work';
 import SEO from '../components/seo';
 
 import '../layouts/index.css';
@@ -44,6 +45,7 @@ class IndexPage extends React.Component {
         />
         <Hero id="hero" data={data.hero.edges} />
         <About data={data.about.edges} />
+        <Work data={data.work.edges} />
         <Skills data={data.skills.edges} />
         <Projects data={data.projects.edges} />
       </Layout>
@@ -106,8 +108,7 @@ export default props => (
             node {
               frontmatter {
                 title
-                languages
-                frameworks
+                skills
                 tools
               }
             }
@@ -129,6 +130,22 @@ export default props => (
                 }
                 hobbies
                 summary
+              }
+              html
+            }
+          }
+        }
+        work: allMarkdownRemark(
+          filter: { fileAbsolutePath: { regex: "/work/" } }
+          sort: { fields: [frontmatter___date], order: DESC }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                company
+                date
+                range
               }
               html
             }

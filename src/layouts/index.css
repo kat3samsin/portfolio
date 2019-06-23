@@ -23,24 +23,32 @@ body {
   width: 100%;
 }
 
+/* light mode */
+
 body.light-mode {
   background-color: rgb(235, 235, 235);
   color: #212731;
   transition: background-color 0.3s ease;
 }
-body.dark-mode {
-  background-color: #212731;
-  color: #f9ffed;
-}
-
 body.light-mode a {
   color: rgb(59, 57, 57);
 }
-
+body.light-mode .title {
+  color: #d23669;
+}
 body.light-mode a:hover {
   border-bottom: 2px solid rgb(59, 57, 57);
 }
 
+/* dark mode */
+
+body.dark-mode {
+  background-color: #212731;
+  color: #f9ffed;
+}
+body.dark-mode .title {
+  color: #ffa7c4;
+}
 body.dark-mode a {
   color: rgb(204, 197, 197);
 }

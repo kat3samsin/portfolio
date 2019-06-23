@@ -7,12 +7,13 @@ import Typist from 'react-typist';
 const Hello = styled.div`
   @media only screen and (max-width: 600px) {
     padding-top: 0px;
-    font-size: 3em;
+    font-size: 4em;
   }
   padding-top: 50px;
   font-family: Dank Mono Italic;
   font-size: 5em;
   font-style: italic;
+  font-weight: bold;
   display: inline-block;
 `;
 
@@ -61,7 +62,9 @@ const Hero = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
     <div id="home">
-      <Hello data-aos="fade-in">{frontmatter.title}</Hello>
+      <Hello className="title" data-aos="fade-in">
+        {frontmatter.title}
+      </Hello>
       <WaveContainer data-aos="fade-in">
         <Wave fixed={frontmatter.wave.childImageSharp.fixed} alt="hello" />
       </WaveContainer>

@@ -1,17 +1,16 @@
 ---
 title: 'skills'
-languages: 
-    - JavaScript
-    - HTML
-    - CSS
-    - Java
-    - .NET
-    - SQL
+skills:
+  - JavaScript
+  - SuiteScript
+  - HTML
+  - CSS
+  - Java
+  - .NET
+  - ReactJS
 
-frameworks:
-    - ReactJS
-
-tools: 
-    - Git
-    - P4
+tools:
+  - Git
+  - P4
+  - SonarQube
 ---

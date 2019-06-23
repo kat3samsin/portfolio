@@ -12,9 +12,13 @@ const AboutMe = styled.div`
   font-family: Dank Mono Italic;
   font-size: 5em;
   font-style: italic;
+  font-weight: bold;
 `;
 
 const AvatarContainer = styled.div`
+  @media only screen and (max-width: 600px) {
+    padding: 0px 100px;
+  }
   display: inline-block;
   vertical-align: top;
   padding: 20px;
@@ -33,7 +37,9 @@ const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
     <div id="about">
-      <AboutMe data-aos="fade-in">{frontmatter.title}</AboutMe>
+      <AboutMe className="title" data-aos="fade-in">
+        {frontmatter.title}
+      </AboutMe>
       <AvatarContainer data-aos="fade-up">
         <Img fixed={frontmatter.avatar.childImageSharp.fixed} alt="avatar" />
       </AvatarContainer>

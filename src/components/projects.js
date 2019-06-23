@@ -11,6 +11,7 @@ const ProjectsTitle = styled.div`
   font-family: Dank Mono Italic;
   font-size: 5em;
   font-style: italic;
+  font-weight: bold;
 `;
 
 // const Project = styled.div`
@@ -26,7 +27,9 @@ const Projects = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
     <div id="projects">
-      <ProjectsTitle data-aos="fade-in">{frontmatter.title}</ProjectsTitle>
+      <ProjectsTitle className="title" data-aos="fade-in">
+        {frontmatter.title}
+      </ProjectsTitle>
     </div>
   );
 };
