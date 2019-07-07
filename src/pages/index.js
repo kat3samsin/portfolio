@@ -12,6 +12,7 @@ import Skills from '../components/skills';
 import Work from '../components/work';
 import SEO from '../components/seo';
 
+import 'semantic-ui-css/semantic.min.css';
 import '../layouts/index.css';
 
 class IndexPage extends React.Component {
@@ -71,6 +72,7 @@ export default props => (
                 roles
                 start
                 end
+                name
                 wave {
                   childImageSharp {
                     fixed(width: 80, height: 80) {

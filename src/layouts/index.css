@@ -36,9 +36,6 @@ body.light-mode a {
 body.light-mode .title {
   color: #d23669;
 }
-body.light-mode a:hover {
-  border-bottom: 2px solid rgb(59, 57, 57);
-}
 
 /* dark mode */
 
@@ -51,7 +48,4 @@ body.dark-mode .title {
 }
 body.dark-mode a {
   color: rgb(204, 197, 197);
-}
-body.dark-mode a:hover {
-  border-bottom: 2px solid rgb(204, 197, 197);
 }

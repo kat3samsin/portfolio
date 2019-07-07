@@ -67,7 +67,7 @@ const Hero = ({ data }) => {
         <Wave fixed={frontmatter.wave.childImageSharp.fixed} alt="hello" />
       </WaveContainer>
       <Greetings data-aos="fade-up">
-        I'm&nbsp;<Name>Katrina Tantay.&nbsp;</Name>
+        I'm&nbsp;<Name>{frontmatter.name}!</Name>
         <Typist cursor={{ blink: true, hideWhenDone: true }}>
           {frontmatter.start}&nbsp;
           {frontmatter.roles &&

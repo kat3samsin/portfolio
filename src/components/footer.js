@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Divider, Flag, Icon, Segment } from 'semantic-ui-react';
 
 const FooterStyled = styled.header`
   display: flex;
@@ -13,7 +14,7 @@ const CopyrightContainer = styled.div`
     font-size: 0.7em;
     margin: 0;
   }
-  font-size: 1em;
+  font-size: 1.2em;
   margin-left: auto;
   padding: 10px;
   overflow: hidden;
@@ -21,32 +22,31 @@ const CopyrightContainer = styled.div`
 
 const LinkStyled = styled.a`
   @media only screen and (max-width: 600px) {
-    font-size: 0.7em;
+    font-size: 1em;
     padding: 5px;
   }
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: bold;
   text-decoration: none;
 `;
 
 const Footer = () => (
   <>
-    <FooterStyled>
-      <LinkStyled href="mailto:kat3samsin@gmail.com" target="_blank">
-        Email
-      </LinkStyled>
-      <LinkStyled href="https://www.github.com/kat3samsin" target="_blank">
-        GitHub
-      </LinkStyled>
-      <LinkStyled href="https://www.linkedin.com/in/ksamsin" target="_blank">
-        LinkedIn
-      </LinkStyled>
-      <br />
-      <CopyrightContainer>
-        © {new Date().getFullYear()} Katrina Lou S. Tantay | 🇵🇭
-      </CopyrightContainer>
-    </FooterStyled>
+    <FooterStyled />
+    <LinkStyled href="mailto:kat3samsin@gmail.com" target="_blank">
+      <Icon link name="mail" />
+    </LinkStyled>
+    <LinkStyled href="https://www.github.com/kat3samsin" target="_blank">
+      <Icon link name="github" />
+    </LinkStyled>
+    <LinkStyled href="https://www.linkedin.com/in/ksamsin" target="_blank">
+      <Icon link name="linkedin" />
+    </LinkStyled>
+    <CopyrightContainer>
+      © {new Date().getFullYear()} Katrina Lou S. Tantay |&nbsp;
+      <Flag name="ph" />
+    </CopyrightContainer>
   </>
 );
 

@@ -16,6 +16,9 @@ const LinkStyled = styled(Link)`
   text-decoration: none;
   padding: 10px;
   font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const AnchorStyled = styled.a`
@@ -23,6 +26,9 @@ const AnchorStyled = styled.a`
   text-decoration: none;
   padding: 10px;
   font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const ToggleContainer = styled.div`
@@ -31,18 +37,25 @@ const ToggleContainer = styled.div`
 
 const Header = () => (
   <>
-    <HeaderStyled data-aos="flip-up">
-      <LinkStyled to="/#about">About</LinkStyled>
-      <LinkStyled to="/#work">Work</LinkStyled>
-      <LinkStyled to="/#skills">Skills</LinkStyled>
+    <HeaderStyled>
+      <LinkStyled data-aos="zoom-in-right" to="/#about">
+        About
+      </LinkStyled>
+      <LinkStyled data-aos="zoom-in-right" to="/#work">
+        Work
+      </LinkStyled>
+      <LinkStyled data-aos="zoom-in-right" to="/#skills">
+        Skills
+      </LinkStyled>
       {/* <LinkStyled to="/#projects">Projects</LinkStyled> */}
       <AnchorStyled
+        data-aos="zoom-in-right"
         href="https://drive.google.com/file/d/1aoWZc8HJ6HovtujThelY7qggiRK5GNrE/view?usp=sharing"
         target="_blank"
       >
         Resume
       </AnchorStyled>
-      <ToggleContainer>
+      <ToggleContainer data-aos="zoom-in-left">
         <DarkModeButton />
       </ToggleContainer>
     </HeaderStyled>
