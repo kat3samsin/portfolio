@@ -7,12 +7,12 @@ title: 'skills'
 - JavaScript
 - SuiteScript
 - HTML / CSS
-- Java
-- .NET
 - ReactJS
 - NodeJS
 - GraphQL
 - SQL
+- Jest
+- Jasmine
 
 **Tools**
 

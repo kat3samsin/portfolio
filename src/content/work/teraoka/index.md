@@ -5,9 +5,7 @@ company: 'Teraoka Seiko'
 date: '2006-05-01'
 ---
 
-- Led and designed support for 3rd party POS.
-- Designed an application to simulate the Delitouch Pen.
-- Led a research that improved the battery life of Delious Mobile Device to more than 50% by reducing WIFI usage if unnecessary.
-- Led the speed improvement in printing of long receipts from 1 minute to 20 seconds by converting receipts to bitonal image.
-- Developed a .NET application for USB handling in Windows, which includes detection, enumeration and restart.
-- Debugged USB problems by analyzing Windows Minidump using WinDbg.
+- Led a team to create solutions for Delious System that is being used in Singapore, Japan, and China.
+- Designed and developed an application for taking orders from a talking Pen which is being used in Japan. 
+- Improved the battery life of Delious Mobile device by 50%.
+- Improved speed of printing long receipts by 300%. Created various applications for automation of Delious System.
