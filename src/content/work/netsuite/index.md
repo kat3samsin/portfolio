@@ -1,6 +1,6 @@
 ---
 range: '2012 - Current'
-title: 'Principal Software Engineer'
+title: 'Software Engineering Manager'
 company: 'Oracle NetSuite'
 date: '2012-05-04'
 ---
