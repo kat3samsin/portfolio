@@ -36,16 +36,20 @@ const About = ({ data }) => {
   const { frontmatter, html } = data[0].node;
   return (
     <div id="about">
-      <AboutMe className="title" data-aos="fade-in">
+      {/* <AboutMe className="title" data-aos="fade-in"> */}
+      <AboutMe className="title">
         {frontmatter.title}
       </AboutMe>
-      <AvatarContainer data-aos="fade-up">
+      {/* <AvatarContainer data-aos="fade-up"> */}
+      <AvatarContainer >
         <Img fixed={frontmatter.avatar.childImageSharp.fixed} alt="avatar" />
       </AvatarContainer>
-      <Description data-aos="fade-left">
+      {/* <Description data-aos="fade-left"> */}
+      <Description>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <div style={{ display: `inline-block` }}>
-          I have a full spectrum of interests. I'm a
+          <br />
+          I have a full spectrum of interests.
           <Typist cursor={{ blink: true, hideWhenDone: true }}>
             {frontmatter.hobbies &&
               frontmatter.hobbies.map((hobby, i) => (
@@ -55,6 +59,7 @@ const About = ({ data }) => {
                 </div>
               ))}
             {frontmatter.hobbies.join(', ')}
+            <br />
             {frontmatter.summary}
           </Typist>
         </div>

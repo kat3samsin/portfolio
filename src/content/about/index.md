@@ -8,7 +8,7 @@ hobbies:
   - 🎧
   - ☕️
   - ⌨️
-summary: '. I like all things beautiful. I enjoy recording memories by journalling. I love the smell of books, listening to lossless music, trading stock and crypto, building mech keybs, and making damn good coffee!'
+summary: 'I like all things beautiful. I enjoy recording memories by journalling. I love the smell of books, listening to lossless music, trading stock and crypto, building mech keybs, and making damn good coffee!'
 ---
 
 My interest in coding sparked in high school where I learned to create random shapes using Turbo Pascal. I took CS at Mapua University back in 2002 and graduated in 2005, shortly after I had my first job as a Java Developer.

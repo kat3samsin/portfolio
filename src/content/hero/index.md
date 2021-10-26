@@ -2,7 +2,7 @@
 title: 'hello there! '
 wave: './wave.png'
 email: './email.png'
-start: 'A highly motivated'
+start: 'A highly motivated '
 name: 'Katrina Tantay'
 roles:
   - software engineer
