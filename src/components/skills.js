@@ -13,7 +13,9 @@ const SkillsTitle = styled.div`
   font-weight: bold;
 `;
 
-const Skill = styled.div``;
+const Skill = styled.div`
+  font-size: 1.2em;
+`;
 
 const Skills = ({ data }) => {
   const { frontmatter, html } = data[0].node;

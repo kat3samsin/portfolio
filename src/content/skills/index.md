@@ -5,17 +5,19 @@ title: 'skills'
 **Languages**
 
 - JavaScript
-- SuiteScript
-- HTML / CSS
+- TypeScript
 - ReactJS
 - NodeJS
 - GraphQL
-- SQL
 - Jest
 - Jasmine
+- SQL
+- SuiteScript
 
 **Tools**
 
 - Git
-- P4
+- Docker
+- Kubernetes
+- Perforce
 - SonarQube

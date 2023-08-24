@@ -20,7 +20,7 @@ const AvatarContainer = styled.div`
   }
   display: inline-block;
   vertical-align: top;
-  padding: 20px;
+  padding-right: 20px;
 `;
 
 const Description = styled.div`
@@ -28,6 +28,7 @@ const Description = styled.div`
     font-size: 1em;
   }
   font-size: 1.2em;
+  vertical-align: top;
   display: inline-block;
   max-width: 700px;
 `;
@@ -37,19 +38,19 @@ const About = ({ data }) => {
   return (
     <div id="about">
       {/* <AboutMe className="title" data-aos="fade-in"> */}
-      <AboutMe className="title">
-        {frontmatter.title}
-      </AboutMe>
+      <AboutMe className="title">{frontmatter.title}</AboutMe>
       {/* <AvatarContainer data-aos="fade-up"> */}
-      <AvatarContainer >
-        <Img fixed={frontmatter.avatar.childImageSharp.fixed} alt="avatar" />
+      <AvatarContainer>
+        <Img
+          fixed={frontmatter.avatar.childImageSharp.fixed}
+          alt="this is me"
+        />
       </AvatarContainer>
       {/* <Description data-aos="fade-left"> */}
       <Description>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <div style={{ display: `inline-block` }}>
-          <br />
-          I have a full spectrum of interests.
+          <br />I have a full spectrum of interests.
           <Typist cursor={{ blink: true, hideWhenDone: true }}>
             {frontmatter.hobbies &&
               frontmatter.hobbies.map((hobby, i) => (

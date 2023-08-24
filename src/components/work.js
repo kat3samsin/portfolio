@@ -15,6 +15,7 @@ const WorkTitle = styled.div`
 
 const WorkContainer = styled.div`
   max-width: 700px;
+  font-size: 1.2em;
 `;
 
 const Company = styled.div`

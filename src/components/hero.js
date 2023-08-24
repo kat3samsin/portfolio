@@ -55,20 +55,24 @@ const Email = styled.a`
   text-decoration: none;
   font-weight: bold;
 `;
+const About = styled.div`
+  padding-top: 20px;
+`;
 
 const Hero = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
     <div id="home">
-      <Hello className="title" data-aos="fade-in">
-        {frontmatter.title}
-      </Hello>
-      <WaveContainer data-aos="fade-in">
-        <Wave fixed={frontmatter.wave.childImageSharp.fixed} alt="hello" />
+      <Hello className="title">{frontmatter.title}</Hello>
+      <WaveContainer>
+        <Wave
+          fixed={frontmatter.wave.childImageSharp.fixed}
+          alt="waving hand"
+        />
       </WaveContainer>
-      <Greetings data-aos="fade-up">
+      <Greetings>
         I'm&nbsp;<Name>{frontmatter.name}!</Name>
-        <Typist cursor={{ blink: true, hideWhenDone: true }}>
+        {/* <Typist cursor={{ blink: true, hideWhenDone: true }}>
           {frontmatter.start}&nbsp;
           {frontmatter.roles &&
             frontmatter.roles.map((roles, i) => (
@@ -79,7 +83,8 @@ const Hero = ({ data }) => {
             ))}
           {frontmatter.roles.join(', ')}&nbsp;
           {frontmatter.end}
-        </Typist>
+        </Typist> */}
+        <About>{frontmatter.full}</About>
       </Greetings>
       <br />
       <div data-aos="fade-up">
@@ -87,11 +92,11 @@ const Hero = ({ data }) => {
         <Img fixed={frontmatter.email.childImageSharp.fixed} alt="email" />
         &nbsp;
         <Email
-          href="mailto:kat3samsin@gmail.com"
+          href="mailto:katrinatantay@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          kat3samsin@gmail.com
+          katrinatantay@gmail.com
         </Email>
       </div>
     </div>

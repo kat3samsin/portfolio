@@ -50,7 +50,7 @@ const Header = () => (
       {/* <LinkStyled to="/#projects">Projects</LinkStyled> */}
       <AnchorStyled
         data-aos="zoom-in-right"
-        href="https://drive.google.com/file/d/1aoWZc8HJ6HovtujThelY7qggiRK5GNrE/view?usp=sharing"
+        href="https://docs.google.com/document/d/14ApO4Q0q7zVJX7Yc7srDUB5omkdtJ_cnV6qW6orGFPw/edit?usp=sharing"
         target="_blank"
       >
         Resume

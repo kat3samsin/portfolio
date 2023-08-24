@@ -73,6 +73,7 @@ export default props => (
                 start
                 end
                 name
+                full
                 wave {
                   childImageSharp {
                     fixed(width: 80, height: 80) {

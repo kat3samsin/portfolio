@@ -34,17 +34,21 @@ const LinkStyled = styled.a`
 const Footer = () => (
   <>
     <FooterStyled />
-    <LinkStyled href="mailto:kat3samsin@gmail.com" target="_blank">
+    <LinkStyled href="mailto:katrinatantay@gmail.com" target="_blank">
       <Icon link name="mail" />
     </LinkStyled>
     <LinkStyled href="https://www.github.com/kat3samsin" target="_blank">
       <Icon link name="github" />
     </LinkStyled>
-    <LinkStyled href="https://www.linkedin.com/in/ksamsin" target="_blank">
+    <LinkStyled
+      href="https://www.linkedin.com/in/katrinatantay"
+      target="_blank"
+    >
       <Icon link name="linkedin" />
     </LinkStyled>
     <CopyrightContainer>
-      © {new Date().getFullYear()} Katrina Lou S. Tantay |&nbsp;
+      © {new Date().getFullYear()} Katrina Tantay |&nbsp;
+      <Flag name="us" />
       <Flag name="ph" />
     </CopyrightContainer>
   </>

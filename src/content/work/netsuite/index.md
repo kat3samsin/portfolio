@@ -1,11 +1,13 @@
 ---
-range: '2012 - Current'
+range: '2019 - 2022'
 title: 'Software Engineering Manager'
 company: 'Oracle NetSuite'
 date: '2012-05-04'
 ---
 
-- Designed and built Tax Reporting Framework in NetSuite. This enabled NetSuite teams and Partners worldwide to quickly develop and deploy localized tax reports to NetSuite customers.
-- Leads JAPAC teams to deliver on-time, compliant, and localized tax solutions to NetSuite customers.
-- Develops and mentors engineers to make sure they are happy, properly motivated, and constantly challenged at work and in life.
-- Collaborates with teams worldwide to add features and improve development experience using Tax Reporting framework
+- Managed a team of 5 developers spread across 3 teams which specializes in developing JAPAC Localization solutions, Tax Reporting Framework, Global Tax Reporting and Withholding Taxes.
+- Helped my team identify and utilize their strengths, develop their skills, and ensure that best coding practices are being applied.
+- Collaborated with different stakeholders across NetSuite and Oracle  to continuously improve and build features for the Tax Reporting Framework.
+- Created Tax Reporting Framework CLI an open-source tool to fast forward the creation, development, and deployment of the tax reports in NetSuite.
+
+

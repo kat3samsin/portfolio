@@ -3,7 +3,7 @@
   "private": true,
   "description": "This is me",
   "version": "0.1.0",
-  "author": "Katrina Lou S. Tantay <kat3samsin@gmail.com>",
+  "author": "Katrina Tantay <katrinatantay@gmail.com>",
   "dependencies": {
     "aos": "^2.3.4",
     "gatsby": "^2.32.13",
